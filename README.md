@@ -1,5 +1,4 @@
 # The Project Kite Toolbox
-----------
 A toolbox for simple video and audio encoding. Written in C#. Licensed under GPL.
 一个简单的视频和音频编码器。 使用C#编写。 遵守 GPL 开放源代码协议。
 ## 为什么要开发此工具 Why this software has been developed:
