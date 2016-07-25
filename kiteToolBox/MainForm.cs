@@ -50,8 +50,19 @@ namespace kiteToolBox
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -67,6 +78,7 @@ namespace kiteToolBox
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "压制";
+            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -82,6 +94,7 @@ namespace kiteToolBox
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "视频自由处理";
+            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton3
@@ -97,6 +110,7 @@ namespace kiteToolBox
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "音频自由处理";
+            this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton4
@@ -112,6 +126,7 @@ namespace kiteToolBox
             this.radioButton4.TabIndex = 3;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "抽取/封装";
+            this.radioButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton5
@@ -127,6 +142,7 @@ namespace kiteToolBox
             this.radioButton5.TabIndex = 4;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "帮助";
+            this.radioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -288,9 +304,9 @@ namespace kiteToolBox
             "动画为主",
             "三次元为主",
             "一图流"});
-            this.comboBox1.Location = new System.Drawing.Point(68, 85);
+            this.comboBox1.Location = new System.Drawing.Point(44, 85);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 20);
+            this.comboBox1.Size = new System.Drawing.Size(144, 20);
             this.comboBox1.TabIndex = 9;
             // 
             // label3
@@ -298,9 +314,9 @@ namespace kiteToolBox
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 12);
+            this.label3.Size = new System.Drawing.Size(35, 12);
             this.label3.TabIndex = 8;
-            this.label3.Text = "预设类型:";
+            this.label3.Text = "预设:";
             // 
             // textBox3
             // 
@@ -355,7 +371,6 @@ namespace kiteToolBox
             this.button2.TabIndex = 3;
             this.button2.Text = "开始压制!";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
@@ -377,7 +392,6 @@ namespace kiteToolBox
             this.button1.TabIndex = 1;
             this.button1.Text = "打开文件";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -393,7 +407,8 @@ namespace kiteToolBox
             this.statusStrip1.BackColor = System.Drawing.Color.White;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3});
             this.statusStrip1.Location = new System.Drawing.Point(0, 205);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(384, 22);
@@ -428,11 +443,112 @@ namespace kiteToolBox
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Location = new System.Drawing.Point(12, 40);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(360, 162);
+            this.panel2.TabIndex = 8;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Location = new System.Drawing.Point(68, 34);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(227, 14);
+            this.textBox5.TabIndex = 18;
+            this.textBox5.WordWrap = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 12);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "输出文件:";
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(301, 30);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(61, 21);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "选择文件";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 7);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 12);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "输入文件:";
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(301, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(61, 21);
+            this.button7.TabIndex = 14;
+            this.button7.Text = "打开文件";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Location = new System.Drawing.Point(68, 7);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(227, 14);
+            this.textBox6.TabIndex = 13;
+            this.textBox6.WordWrap = false;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Location = new System.Drawing.Point(3, 88);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox7.Size = new System.Drawing.Size(290, 71);
+            this.textBox7.TabIndex = 19;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 61);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 12);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "预设:";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(48, 17);
+            this.toolStripStatusLabel3.Text = "GPL-3.0";
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(384, 227);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
@@ -445,33 +561,14 @@ namespace kiteToolBox
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "kite工具箱";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel3_Click(object sender, EventArgs e)
-        {
 
         }
 
