@@ -7,17 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace kiteToolBox
-{
-    public partial class MainForm : Form
-    {
-        public MainForm()
-        {
+namespace kiteToolBox {
+    public partial class MainForm : Form {
+        public MainForm() {
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -572,8 +568,7 @@ namespace kiteToolBox
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
+        private void button5_Click(object sender, EventArgs e) {
             System.Diagnostics.Process.Start("https://github.com/MegaKite214/kite_toolbox");
         }
     }
