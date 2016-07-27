@@ -32,7 +32,7 @@ namespace kiteToolBox
                 String ver = s.Substring(0, i);
                 if (ver == "0") goto a;
                 String info = s.Substring(i + 1, s.Length - i - 1);
-                Application.Run(new NewVersion(ver, info));
+                new NewVersion(ver, info).ShowDialog();
                 return;
             }
             catch{

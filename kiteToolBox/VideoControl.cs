@@ -21,8 +21,8 @@ namespace kiteToolBox {
                 string a = chooseFile.FileName;
                 textBox6.Clear();
                 textBox6.AppendText(a);
-
             }
+            chooseFile.Dispose(); // Free this shit memory
         }
 
         private void buttonChooseFile_Click(object sender, EventArgs e) {
@@ -33,6 +33,7 @@ namespace kiteToolBox {
                 textBox5.Clear();
                 textBox5.AppendText(b);
             }
+            chooseOutPutPath.Dispose();
         }
     }
 }

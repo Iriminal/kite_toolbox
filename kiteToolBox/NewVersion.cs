@@ -26,8 +26,8 @@ namespace kiteToolBox {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            this.Hide();
-            new MainForm().Show();
+            Application.Run(new MainForm());
+            this.Dispose();
         }
     }
 }
