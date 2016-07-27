@@ -509,6 +509,7 @@ namespace kiteToolBox {
             this.button6.TabIndex = 16;
             this.button6.Text = "选择文件";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label11
             // 
@@ -530,6 +531,7 @@ namespace kiteToolBox {
             this.button7.TabIndex = 14;
             this.button7.Text = "打开文件";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // textBox6
             // 
@@ -579,5 +581,37 @@ namespace kiteToolBox {
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            button1.Click += new System.EventHandler(this.button1_Click);
+            OpenFileDialog chooseFile = new OpenFileDialog();
+            if (chooseFile.ShowDialog() == DialogResult.OK)
+            {
+                chooseFile.Title = "请选择文件";
+                chooseFile.Filter = "所有文件(*.*)|*.*";
+                string a = chooseFile.FileName;
+                textBox6.Clear();
+                textBox6.AppendText(a);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog chooseOutPutPath = new FolderBrowserDialog();
+            if (chooseOutPutPath.ShowDialog() == DialogResult.OK)
+            {
+                chooseOutPutPath.Description = "请选择文件夹";
+                string b = chooseOutPutPath.SelectedPath;
+                textBox5.Clear();
+                textBox5.AppendText(b);
+            }
+        }
+
     }
 }
