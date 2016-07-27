@@ -21,11 +21,10 @@ namespace kiteToolBox
             String productVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
             //Request update
-            try
-            {
-
+            retry:
+            try {
                 var client = new WebClient();
-                String s = client.DownloadString("http://api-acecyber.rhcloud.com/hasUpdate?currentVersion=" + productVersion);
+                String s = client.DownloadString(/*"http://api-acecyber.rhcloud.com/hasUpdate?currentVersion="*/"localhost" + productVersion);
                 s = s.Replace("<html>", "");
                 s = s.Replace("</html>", "");
 
@@ -34,13 +33,16 @@ namespace kiteToolBox
                 if (ver == "0") goto a;
                 String info = s.Substring(i + 1, s.Length - i - 1);
                 Application.Run(new NewVersion(ver, info));
-            }
-            catch
-            {
                 return;
             }
-  
-            return;
+            catch{
+                DialogResult a = 
+                    MessageBox.Show("无法检查更新! 请检查您的网络设置 (或者更新服务器爆炸了) \n 点击重试可再次尝试检测更新。",
+                    "无法检查更新",MessageBoxButtons.RetryCancel);
+                if(a == DialogResult.Retry) goto retry;
+                else goto a;
+                
+            }
 
             a:
             Application.Run(new MainForm());
