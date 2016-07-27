@@ -24,7 +24,7 @@ namespace kiteToolBox
             retry:
             try {
                 var client = new WebClient();
-                String s = client.DownloadString(/*"http://api-acecyber.rhcloud.com/hasUpdate?currentVersion="*/"localhost" + productVersion);
+                String s = client.DownloadString("http://api-acecyber.rhcloud.com/hasUpdate?currentVersion=" + productVersion);
                 s = s.Replace("<html>", "");
                 s = s.Replace("</html>", "");
 
