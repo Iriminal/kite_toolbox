@@ -30,13 +30,14 @@
             this.richDescription = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // labelNoticeA
             // 
             this.labelNoticeA.AutoSize = true;
-            this.labelNoticeA.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelNoticeA.Location = new System.Drawing.Point(20, 22);
+            this.labelNoticeA.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelNoticeA.Location = new System.Drawing.Point(20, 20);
             this.labelNoticeA.Name = "labelNoticeA";
             this.labelNoticeA.Size = new System.Drawing.Size(340, 28);
             this.labelNoticeA.TabIndex = 0;
@@ -45,8 +46,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(20, 52);
+            this.label1.Font = new System.Drawing.Font("微软雅黑 Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(20, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 21);
             this.label1.TabIndex = 1;
@@ -55,8 +56,8 @@
             // labelUpdate
             // 
             this.labelUpdate.AutoSize = true;
-            this.labelUpdate.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelUpdate.Location = new System.Drawing.Point(21, 87);
+            this.labelUpdate.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelUpdate.Location = new System.Drawing.Point(21, 80);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(55, 19);
             this.labelUpdate.TabIndex = 2;
@@ -65,8 +66,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(20, 107);
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(20, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 19);
             this.label3.TabIndex = 3;
@@ -76,10 +77,10 @@
             // 
             this.richDescription.BackColor = System.Drawing.Color.White;
             this.richDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richDescription.Location = new System.Drawing.Point(20, 131);
+            this.richDescription.Location = new System.Drawing.Point(20, 121);
             this.richDescription.Name = "richDescription";
             this.richDescription.ReadOnly = true;
-            this.richDescription.Size = new System.Drawing.Size(470, 138);
+            this.richDescription.Size = new System.Drawing.Size(415, 127);
             this.richDescription.TabIndex = 4;
             this.richDescription.Text = "";
             // 
@@ -88,33 +89,42 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 282);
+            this.button1.Location = new System.Drawing.Point(12, 260);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 25);
+            this.button1.Size = new System.Drawing.Size(76, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "立刻更新";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(94, 282);
+            this.button2.Location = new System.Drawing.Point(94, 260);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 25);
+            this.button2.Size = new System.Drawing.Size(114, 23);
             this.button2.TabIndex = 6;
-            this.button2.Text = "忽略";
+            this.button2.Text = "下次启动时提醒我";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(466, 20);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(26, 263);
+            this.progressBar1.TabIndex = 7;
+            // 
             // NewVersion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(504, 315);
+            this.ClientSize = new System.Drawing.Size(504, 291);
             this.ControlBox = false;
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richDescription);
@@ -143,5 +153,6 @@
         private System.Windows.Forms.RichTextBox richDescription;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
