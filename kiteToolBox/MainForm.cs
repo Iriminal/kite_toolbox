@@ -360,7 +360,7 @@ namespace kiteToolBox {
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(3, 136);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(354, 23);
@@ -415,19 +415,19 @@ namespace kiteToolBox {
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(84, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(95, 17);
             this.toolStripStatusLabel1.Text = "kite toolbox v1";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(75, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(84, 17);
             this.toolStripStatusLabel2.Text = "BETA version";
             // 
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(48, 17);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(52, 17);
             this.toolStripStatusLabel3.Text = "GPL-3.0";
             // 
             // button5
@@ -508,6 +508,7 @@ namespace kiteToolBox {
             this.button6.TabIndex = 16;
             this.button6.Text = "选择文件";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label11
             // 
@@ -529,6 +530,7 @@ namespace kiteToolBox {
             this.button7.TabIndex = 14;
             this.button7.Text = "打开文件";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // textBox6
             // 
@@ -553,7 +555,7 @@ namespace kiteToolBox {
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "kite工具箱";
@@ -577,5 +579,37 @@ namespace kiteToolBox {
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            button1.Click += new System.EventHandler(this.button1_Click);
+            OpenFileDialog chooseFile = new OpenFileDialog();
+            if (chooseFile.ShowDialog() == DialogResult.OK)
+            {
+                chooseFile.Title = "请选择文件";
+                chooseFile.Filter = "所有文件(*.*)|*.*";
+                string a = chooseFile.FileName;
+                textBox6.Clear();
+                textBox6.AppendText(a);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog chooseOutPutPath = new FolderBrowserDialog();
+            if (chooseOutPutPath.ShowDialog() == DialogResult.OK)
+            {
+                chooseOutPutPath.Description = "请选择文件夹";
+                string b = chooseOutPutPath.SelectedPath;
+                textBox5.Clear();
+                textBox5.AppendText(b);
+            }
+        }
+
     }
 }
