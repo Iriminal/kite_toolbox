@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompressControl.Designer.cs">
+      <DependentUpon>CompressControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,13 +68,25 @@
     <Compile Include="NewVersion.Designer.cs">
       <DependentUpon>NewVersion.cs</DependentUpon>
     </Compile>
+    <Compile Include="VideoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VideoControl.Designer.cs">
+      <DependentUpon>VideoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CompressControl.resx">
+      <DependentUpon>CompressControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewVersion.resx">
       <DependentUpon>NewVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoControl.resx">
+      <DependentUpon>VideoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,10 +109,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="kite_toolbox.ico" />
     <None Include="Resources\kite_toolbox.ico" />
-    <None Include="Resources\ICON.ico" />
-    <None Include="Resources\Icon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
