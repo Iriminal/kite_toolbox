@@ -12,5 +12,10 @@ namespace kiteToolBox {
         public CompressControl() {
             InitializeComponent();
         }
+
+        private void textBox3_Enter(object sender, EventArgs e) {
+            textBox3.Text = "";
+            textBox3.ForeColor = Color.Black;
+        }
     }
 }

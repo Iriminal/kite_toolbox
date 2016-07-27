@@ -231,6 +231,7 @@
             this.textBox3.TabIndex = 7;
             this.textBox3.Text = "可选";
             this.textBox3.WordWrap = false;
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             // 
             // label2
             // 
