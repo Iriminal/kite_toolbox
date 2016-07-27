@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace kiteToolBox {
@@ -26,8 +27,8 @@ namespace kiteToolBox {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            Application.Run(new MainForm());
-            this.Dispose();
+            this.Hide();
+            new MainForm().ShowDialog();      
         }
     }
 }

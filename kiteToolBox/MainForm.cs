@@ -184,6 +184,7 @@ namespace kiteToolBox {
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "kite工具箱";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -214,6 +215,10 @@ namespace kiteToolBox {
         private void radioButton2_CheckedChanged(object sender, EventArgs e) {
             this.panelWork.Controls.Clear();
             this.panelWork.Controls.Add(new VideoControl());
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
         }
     }
 }

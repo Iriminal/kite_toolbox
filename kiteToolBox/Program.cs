@@ -36,7 +36,7 @@ namespace kiteToolBox
                 return;
             }
             catch{
-                DialogResult a = 
+                DialogResult a =
                     MessageBox.Show("无法检查更新! 请检查您的网络设置 (或者更新服务器爆炸了) \n 点击重试可再次尝试检测更新。",
                     "无法检查更新",MessageBoxButtons.RetryCancel);
                 if(a == DialogResult.Retry) goto retry;
